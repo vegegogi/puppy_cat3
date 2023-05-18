@@ -13,18 +13,19 @@ import folium
 import streamlit as st
 from streamlit_folium import st_folium
 from PIL import Image
+
 st.set_page_config(layout="wide")
+st.markdown("<h1 style='text-align: center;'>🐶서울특별시 반려동물 종합 플랫폼🐶</h1>", unsafe_allow_html=True)
 
-
-st.title("------------------------🐶서울특별시 반려동물 종합 플랫폼🐶------------------------\n")
-
+# 이미지 표시
 image_local = Image.open('./a.png')
-st.image(image_local, width=1500)
-background_image = "a.png"
+st.image(image_local, width=1050, use_column_width=True, caption='Image')
 
+# 배경 이미지 설정
+background_image = "./a.png"
 
+# CSS 스타일로 배경 이미지 적용
 css = f"""
-
 <style>
 body {{
     background-image: url("{background_image}");
@@ -33,4 +34,4 @@ body {{
 </style>
 """
 
-st.markdown(css, unsafe_allow_html=True)    
+st.markdown(css, unsafe_allow_html=True)
