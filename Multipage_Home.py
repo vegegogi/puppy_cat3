@@ -18,7 +18,7 @@ st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center;'>🐶서울특별시 반려동물 종합 플랫폼🐶</h1>", unsafe_allow_html=True)
 
 # 이미지 표시
-image_local = Image.open('data\main_banner.png')
+image_local = Image.open('.\data\main_banner.png')
 st.image(image_local, width=1050, use_column_width=True, caption='Image')
 
 # 배경 이미지 설정
