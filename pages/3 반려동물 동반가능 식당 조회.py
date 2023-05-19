@@ -17,7 +17,7 @@ def main() :
 
 
     # 데이터 불러오기
-    pet_food = pd.read_csv('./pet_food_FN3.csv')
+    pet_food = pd.read_csv(r'data\pet_food_FN.csv')
     
     # 상좌: 지역 선택 버튼
     st.subheader("🔔반려동물 동반가능 식당 조회🔔")

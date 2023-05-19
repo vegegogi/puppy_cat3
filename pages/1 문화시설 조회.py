@@ -15,7 +15,7 @@ from streamlit_folium import st_folium
 st.set_page_config(layout="wide")
 
 
-pet_place_clean = pd.read_csv('./pet_place_clean_ver1.csv').iloc[:, 1:]
+pet_place_clean = pd.read_csv(r'data\pet_place_clean_FN.csv').iloc[:, 1:]
 df = pd.DataFrame(pet_place_clean)
 df['카테고리'] = df['카테고리3'].map({'미술관': '문화시설', '박물관': '문화시설', '여행지': '문화시설', '동물병원' : '의료시설', '동물약국' : '의료시설'})
 df1 = df[df['반려동물 동반 가능정보']=='동반가능']
@@ -71,7 +71,7 @@ for index, row in life[tmp_df].iterrows():
         popup_content = folium.Popup("<b>시설명:</b> " + row['시설명'] + "<br><b>휴무일:</b> " + str(row['휴무일']) \
             + "<br><b>운영시간:</b> " + row['운영시간'], max_width=200)  # 여러 내용을 팝업에 추가
         folium.Marker([row['위도'], row['경도']], popup=popup_content, \
-            icon=folium.Icon(color='pink', icon='paw', prefix='fa')).add_to(map)
+            icon=folium.Icon(color='pink', icon='music', prefix='fa')).add_to(map)
 
 
 st_data = st_folium(map, width=1050)
