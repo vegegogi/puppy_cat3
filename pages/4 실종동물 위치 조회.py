@@ -17,7 +17,7 @@ def main() :
     st.subheader('(2022년 5월 15일 ~ 2023년 5월 15일)')
 
     # 데이터 불러오기
-    missing_pets = pd.read_csv('pages\data\missing_pets_2223_FN.csv')
+    missing_pets = pd.read_csv('../data/missing_pets_2223_FN.csv')
     missing_pets['연락처'] = '010-XXXX-XXXX'
 
     st.write("<b>최근 노원구에서 가장 많이 강아지가 사라졌습니다</b>", unsafe_allow_html=True)

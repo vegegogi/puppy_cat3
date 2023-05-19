@@ -10,14 +10,12 @@ from streamlit_folium import st_folium
 import seaborn as sns
 import plotly.express as px
 #==========================================================================
-
 def main() : 
     st.set_page_config(layout="wide")
     st.title("서울특별시 반려동물 동반가능 식당😋")
 
-
     # 데이터 불러오기
-    pet_food = pd.read_csv(r'pages\data\pet_food_FN.csv')
+    pet_food = pd.read_csv(r'../data/pet_food_FN.csv')
     
     # 상좌: 지역 선택 버튼
     st.subheader("🔔반려동물 동반가능 식당 조회🔔")

@@ -15,7 +15,7 @@ from streamlit_folium import st_folium
 st.set_page_config(layout="wide")
 
 
-pet_place_clean = pd.read_csv(r'pages\data\pet_place_clean_FN.csv').iloc[:, 1:]
+pet_place_clean = pd.read_csv(r'../data/pet_place_clean_FN.csv').iloc[:, 1:]
 df = pd.DataFrame(pet_place_clean)
 df['카테고리'] = df['카테고리3'].map({'미술관': '문화시설', '박물관': '문화시설', '여행지': '문화시설', '동물병원' : '의료시설', '동물약국' : '의료시설'})
 df1 = df[df['반려동물 동반 가능정보']=='동반가능']
